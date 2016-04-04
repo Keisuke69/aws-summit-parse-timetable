@@ -77,22 +77,10 @@ var Timetable = React.createClass({
       })
       
       day3 = temp;
-      
-      for ( var k in day2){
-        day2[k].sort(function(a,b){
-          if(a.location.substr(1,1)<b.location.substr(1,1)) return -1;
-          if(a.location.substr(1,1)>b.location.substr(1,1)) return 1;
-          return 0;
-        });       
-      }
 
-      for ( var k in day3){
-        day3[k].sort(function(a,b){
-          if(a.location.substr(1,1)<b.location.substr(1,1)) return -1;
-          if(a.location.substr(1,1)>b.location.substr(1,1)) return 1;
-          return 0;
-        });       
-      }
+      sort_by_location(day2)
+      sort_by_location(day3)
+
 
       this.setState({
         day2: day2,

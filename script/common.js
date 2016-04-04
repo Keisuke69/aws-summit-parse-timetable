@@ -15,3 +15,13 @@ function truncate(node){
     slot: node.mark.substr(node.mark.length - 4, 4)
   };
 }
+
+function sort_by_location(object){
+  for ( var k in object){
+    object[k].sort(function(a,b){
+      if(a.location.substr(1,1)<b.location.substr(1,1)) return -1;
+      if(a.location.substr(1,1)>b.location.substr(1,1)) return 1;
+      return 0;
+    });       
+  }
+}
