@@ -39,48 +39,10 @@ var Timetable = React.createClass({
         }
       })
 
-
-      // var day2_key = [];
-      // for ( var k in day2){
-      //   day2_key.push(k);
-      // }
-
-      // day2_key.sort(function(a,b){
-      //   if(a<b) return -1;
-      //   if(a>b) return 1;
-      //   return 0;
-      // });
-      
-      // var temp = new Object();
-      // day2_key.map(function(key){
-      //   temp[key] = day2[key];
-      //   return temp;
-      // })
-
-      day2 = temp;
-
-      var day3_key = [];
-      for ( var k in day3){
-        day3_key.push(k);
-      }
-
-      day3_key.sort(function(a,b){
-        if(a<b) return -1;
-        if(a>b) return 1;
-        return 0;
-      });
-      
-      var temp = new Object();
-      day3_key.map(function(key){
-        temp[key] = day3[key];
-        return temp;
-      })
-      
-      day3 = temp;
-
+      day2 = sort_by_time(day2);
+      day3 = sort_by_time(day3);
       sort_by_location(day2)
       sort_by_location(day3)
-
 
       this.setState({
         day2: day2,

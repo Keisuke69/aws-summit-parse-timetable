@@ -35,3 +35,23 @@ function to_double_digits(number) {
   }
  return number;     
 };
+
+function sort_by_time(object){
+      var key = [];
+      for ( var k in object){
+        key.push(k);
+      }
+
+      key.sort(function(a,b){
+        if(a<b) return -1;
+        if(a>b) return 1;
+        return 0;
+      });
+      
+      var temp = new Object();
+      key.map(function(k){
+        temp[k] = object[k];
+        return temp;
+      })
+      return temp;
+}
