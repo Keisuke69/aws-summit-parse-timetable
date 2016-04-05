@@ -9,10 +9,12 @@ function truncate(node){
     type: node.mark.substr(0,1),
     title: node.name, 
     description: node.description, 
-    time: node.start, 
+    start_time: node.start, 
+    end_time: node.end, 
     key: node.mark, 
     location: location, 
-    slot: node.mark.substr(node.mark.length - 4, 4)
+    slot: node.mark.substr(node.mark.length - 4, 4),
+    vacancy: node.vacancy
   };
 }
 
@@ -25,3 +27,11 @@ function sort_by_location(object){
     });       
   }
 }
+
+function to_double_digits(number) {
+  number += "";
+  if (number.length === 1) {
+    number = "0" + number;
+  }
+ return number;     
+};

@@ -132,7 +132,7 @@ var Timetable = React.createClass({
 var Member = React.createClass({
   render: function() {
     var memberNodes = this.props.nodes.map(function(node){
-      return <td>{node.title}</td>
+      return <td>{node.key}<br />{node.title}</td>
     })
 
     return (

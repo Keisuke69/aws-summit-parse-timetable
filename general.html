@@ -9,8 +9,30 @@
 	<script type="text/babel" src="script/general.js"></script>
 	<script type="text/javascript" src="script/common.js"></script>
 	<link rel="stylesheet" href="sample.css" type="text/css"> 
+	<script type="text/javascript">
+		function close_detail(){
+		    document.getElementById('modal-open').style.display='none';
+		    document.getElementById('modal-open').style.opacity=0;
+		    document.getElementById('modal-open').style.transform='translate3d(0px, 100%,0px)';
+		    document.getElementById('modal-title').innerHTML='';
+		    document.getElementById('modal-description').innerHTML='';
+		    document.getElementById('modal-start-end-time').innerHTML='';
+		    document.getElementById('modal-register-btn').innerHTML=''
+		    document.getElementById('modal-close-btn').innerHTML=''
+		}
+	</script>
 </head>
 <body>
-	<div id="app"></div>
-</body>
-</html>
+	<div>
+		<div id="modal-open" class="modal-window">
+			<div class="modal-inner">
+				<div class="start-end-time" id="modal-start-end-time"></div>
+				<div class="title" id="modal-title"></div>
+				<div class="description" id="modal-description"></div>
+				<div class="btn" id="modal-register-btn"></div>
+			</div>
+			<div id="modal-close-btn"></div>
+		</div>
+		<div id="app"></div>
+	</body>
+	</html>
