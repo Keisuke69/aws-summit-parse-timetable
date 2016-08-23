@@ -1,38 +1,18 @@
 <html>
 <head>
-	<script src="lib/react.js"></script>
-	<script src="lib/react-dom.js"></script>
+	<meta charset="UTF-8">
+	<script src="lib/react-0.14.8.min.js"></script>
+	<script src="lib/react-dom-0.14.8.min.js"></script>
 	<link rel="stylesheet" href="path-to-react-virtualized/styles.css">
 	<script src="path-to-react-virtualized/dist/umd/react-virtualized.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+<!-- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-	<script type="text/babel" src="script/general.js"></script>
-	<script type="text/javascript" src="script/common.js"></script>
-	<link rel="stylesheet" href="sample.css" type="text/css"> 
-	<script type="text/javascript">
-		function close_detail(){
-		    document.getElementById('modal-open').style.display='none';
-		    document.getElementById('modal-open').style.opacity=0;
-		    document.getElementById('modal-open').style.transform='translate3d(0px, 100%,0px)';
-		    document.getElementById('modal-title').innerHTML='';
-		    document.getElementById('modal-description').innerHTML='';
-		    document.getElementById('modal-start-end-time').innerHTML='';
-		    document.getElementById('modal-register-btn').innerHTML=''
-		    document.getElementById('modal-close-btn').innerHTML=''
-		}
-	</script>
+	
+	<script src="script/common.js"></script>
+	<link rel="stylesheet" href="session_timetable.css" type="text/css"> 
 </head>
 <body>
-	<div>
-		<div id="modal-open" class="modal-window">
-			<div class="modal-inner">
-				<div class="start-end-time" id="modal-start-end-time"></div>
-				<div class="title" id="modal-title"></div>
-				<div class="description" id="modal-description"></div>
-				<div class="btn" id="modal-register-btn"></div>
-			</div>
-			<div id="modal-close-btn"></div>
-		</div>
-		<div id="app"></div>
-	</body>
-	</html>
+	<div id="react-timetable" />
+	<script src="script/general.js"></script>
+</body>
+</html>
